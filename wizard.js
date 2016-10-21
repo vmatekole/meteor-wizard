@@ -67,7 +67,8 @@ Template.wizardButtons.events({
 
 Template.wizardButtons.helpers({
   showBackButton: function() {
-    return this.backButton && !this.isFirstStep();
+    return this.backButton && !this.isF
+    stStep();
   }
 });
 
@@ -231,7 +232,6 @@ Wizard.prototype = {
     if(data) {
      this.setData(this._activeStepId, data);
     }
-
     this.show(activeIndex - 1);
   },
 
@@ -247,7 +247,6 @@ Wizard.prototype = {
     } else {
       this.setStep(id);
     }
-
     return true;
   },
 

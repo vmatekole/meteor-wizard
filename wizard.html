@@ -1,9 +1,11 @@
 <template name="wizard">
   {{#with innerContext ..}}
-  <div id="{{wizard.id}}" class="wizard">
     {{> Template.dynamic template=wizard.stepsTemplate}}
-    {{> Template.dynamic template=activeStepTemplate}}
-  </div>
+    <div class="col-lg-8 col-sm-7 col-xs-12 projects-blk1-right cf-tab">
+      <div id="{{wizard.id}}" class="wizard">
+          {{> Template.dynamic template=activeStepTemplate}}
+        </div>
+    </div>
   {{/with}}
 </template>
 

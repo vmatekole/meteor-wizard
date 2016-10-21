@@ -1,4 +1,4 @@
-var routers = {}, activeRouter = 'iron:router';
+var routers = {}, activeRouter = 'default';
 var defaultConfig = {
   go: function(name, stepId) {},
   getParams: function(stepId) {},
