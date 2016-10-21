@@ -213,6 +213,7 @@ Wizard.prototype = {
     _.each(this._stepsById, function(step) {
       _.extend(data, step.data());
     });
+    Session.set('mergedData',data);
     return data;
   },
 
@@ -247,6 +248,7 @@ Wizard.prototype = {
     } else {
       this.setStep(id);
     }
+    this.mergedData();
     return true;
   },
 
