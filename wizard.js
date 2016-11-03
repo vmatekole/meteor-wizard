@@ -214,6 +214,8 @@ Wizard.prototype = {
       _.extend(data, step.data());
     });
     Session.set('mergedData',data);
+    // We store in localstorage too ,as Session clears on redirect to Bitcoin payment page.
+    localStorage.setItem('mergedData',JSON.stringify(data))
     return data;
   },
 
